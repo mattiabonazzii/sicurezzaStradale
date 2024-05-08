@@ -10,8 +10,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Educazione stradale</title>
-    <link rel="icon" type="image/png" href="../img/Quiz/icona.png">
+    <link rel="icon" type="image\png" href="../img/icona.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+    <style>
+      #cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    </style>
   </head>
 
   <body>
@@ -33,7 +41,106 @@
       </div>
     </nav>
 
-    <h1>Quiz!!!</h1>
+    <div style="text-align: center;">
+        <h1>Quiz time!</h1>
+        <p>Alcune veloci domande vero o falso per testare le tue conoscenze sull'educazione stradale</p>
+    </div>
+    
+  <div id="cards-container" class="d-flex justify-content-center">
+    <!-- <div id="domanda1" class="card" style="width: 18rem;background-color: cyan;">
+        <img src="attesarisposta.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Domanda numero 1</h5>
+          <p class="card-text">La segnaletica stradale blu indica un'area di parcheggio</p>
+          <a onclick="check_answer(1,'vero')" class="btn btn-primary">Vero</a>
+          <a onclick="check_answer(1,'falso')" class="btn btn-primary">Falso</a>
+        </div>
+    </div>
 
+    <div id="domanda1" class="card" style="width: 18rem;background-color: cyan;">
+      <img src="attesarisposta.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Domanda numero 1</h5>
+        <p class="card-text">La segnaletica stradale blu indica un'area di parcheggio</p>
+        <a onclick="check_answer(1,'vero')" class="btn btn-primary">Vero</a>
+        <a onclick="check_answer(1,'falso')" class="btn btn-primary">Falso</a>
+      </div>
+    </div> -->
+  </div>
   </body>
+  <script>
+
+function generateCards() {
+    const container = document.getElementById("cards-container");
+    const cartePerRiga = 5;
+    const larghezzaMassima = 90 / cartePerRiga;
+
+    for (let i = 1; i <= 10; i++) {
+        const card = document.createElement("div");
+        card.id = "domanda" + i;
+        card.classList.add("card", "m-2");
+        card.style.maxWidth = larghezzaMassima + "%";
+        // card.style.maxHeight = 1 + "%";
+        card.style.backgroundColor = "cyan";
+
+        const cardImg = document.createElement("img");
+        cardImg.src="../img/Quiz/attesarisposta.jpg"
+        cardImg.classList.add("card-img-top");
+        cardImg.alt = "...";
+
+        const cardBody = document.createElement("div");
+        cardBody.classList.add("card-body");
+
+        const cardTitle = document.createElement("h5");
+        cardTitle.classList.add("card-title");
+        cardTitle.textContent = "Domanda numero " + i;
+
+        const cardText = document.createElement("p");
+        cardText.classList.add("card-text");
+        cardText.textContent = "La segnaletica stradale blu indica un'area di parcheggio";
+
+        const trueButton = document.createElement("a");
+        trueButton.classList.add("btn", "btn-primary", "me-2");
+        trueButton.textContent = "Vero";
+        trueButton.addEventListener("click", () => check_answer(i, "vero"));
+
+        const falseButton = document.createElement("a");
+        falseButton.classList.add("btn", "btn-primary");
+        falseButton.textContent = "Falso";
+        falseButton.addEventListener("click", () => check_answer(i, "falso"));
+
+        cardBody.appendChild(cardTitle);
+        cardBody.appendChild(cardText);
+        cardBody.appendChild(trueButton);
+        cardBody.appendChild(falseButton);
+
+        card.appendChild(cardImg);
+        card.appendChild(cardBody);
+
+        container.appendChild(card);
+    }
+}
+
+    const risposte = [
+        "vero", "falso"
+    ]
+
+    function check_answer(numero_domanda, risposta){
+      let carta = document.getElementById("domanda" + numero_domanda);
+      const rispostaCorretta = "vero"; // Imposta la risposta corretta per ogni domanda
+
+      let imgElement = carta.querySelector(".card-img-top");
+
+      // Verifica se la risposta data dall'utente è corretta
+      if (risposta === rispostaCorretta) {
+          carta.style.backgroundColor = "lightgreen"; // Imposta lo sfondo verde per una risposta corretta
+          imgElement.src = "../img/Quiz/rispostaquizgiusta.jpg";
+      } else {
+          carta.style.backgroundColor = "lightcoral"; // Imposta lo sfondo rosso per una risposta errata
+          imgElement.src = "../img/Quiz/rispostasbagliata.png";
+      }
+    } 
+
+    generateCards()
+  </script>
 </html>
