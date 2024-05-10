@@ -16,3 +16,42 @@ body {
   height: 100%;
   width: 100%;
 }
+
+h5, p {
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+}
+
+.caption-text-shadown {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+
+
+
+
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+
+
+
