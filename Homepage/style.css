@@ -1,0 +1,18 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.container-fluid,
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: 100%;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
