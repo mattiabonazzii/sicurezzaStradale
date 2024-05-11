@@ -1,13 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
 
 <head>
-  <!-- Theme Made By www.w3schools.com -->
-  <title>Bootstrap Theme Company Page</title>
+  <script src="assets\js\color-modes.js"></script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.122.0">
+  <title>Footers · Bootstrap v5.3</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/footers/">
   <link rel="icon" type="image/png" href="../img/Quiz/icona.png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+  <link href="assets\dist\css\bootstrap.min.css" rel="stylesheet">
+
   <style>
     body {
       font: sans-serif;
@@ -37,48 +47,133 @@
     .bg-grey {
       background-color: #f6f6f6;
     }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
+    }
   </style>
 </head>
 
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../Homepage/index.html">Homepage</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="../Cartelli_stradali/cartelli_stradali.html">Cartelli stradali</a>
-            <a class="nav-link active" aria-current="true" href="../Guida_sicura/guida_sicura.html">Guida sicura</a>
-            <a class="nav-link active" aria-current="true" href="../Sicurezza_pedoni/sicurezza_pedoni.html">Sicurezza pedoni</a>
-            <a class="nav-link active" aria-current="true" href="../Quiz/quiz.html">Quiz</a>
-          </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../Homepage/index.html">Homepage</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="../Cartelli_stradali/cartelli_stradali.html">Cartelli
+            stradali</a>
+          <a class="nav-link active" aria-current="true" href="../Guida_sicura/guida_sicura.html">Guida sicura</a>
+          <a class="nav-link active" aria-current="true" href="../Sicurezza_pedoni/sicurezza_pedoni.html">Sicurezza
+            pedoni</a>
+          <a class="nav-link active" aria-current="true" href="../Quiz/quiz.html">Quiz</a>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-  <!-- Container (About Section) -->
+  <!--Introduzione -->
   <div id="about" class="container-pad">
     <div class="row">
       <div class="col-sm-8">
         <h2>Introduzione</h2><br>
-        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.</h4><br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <h4>Benvenuto nella sezione dedicata alla guida sicura. Qui troverai preziosi consigli e principi fondamentali
+          per una guida responsabile e sicura su strada. La sicurezza è una priorità per tutti noi, e comprendere i
+          concetti basilari della guida sicura è il primo passo per ridurre il rischio di incidenti e viaggiare in modo
+          più sicuro per te e per gli altri utenti della strada.</h4><br>
+        <p>La sicurezza stradale è una questione cruciale che riguarda tutti noi. In questa sezione, esploreremo insieme
+          i principi di base della guida sicura, fornendo informazioni e consigli pratici per aiutarti a diventare un
+          conducente più sicuro e consapevole. Preparati a scoprire i segreti di una guida responsabile e a metterli in
+          pratica per rendere le strade un luogo più sicuro per tutti.</p>
       </div>
       <div class="col-sm-4">
-        <span class="glyphicon glyphicon-signal logo"></span>
+        <img src="https://www.guidasicura.it/wp-content/uploads/2020/05/storia-e1592346975763.png" class="img-responsive" alt="Immagine" style="max-width: 100%;">
       </div>
     </div>
   </div>
 
+  <!--Principi guida sicura-->
   <div class="container-pad bg-grey">
     <div class="row">
       <div class="col-sm-4">
@@ -86,18 +181,75 @@
       </div>
       <div class="col-sm-8">
         <h2>Principi di guida sicura</h2><br>
-        <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-        <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
+        <h4><strong>MISSION:</strong> La guida sicura si basa su principi fondamentali come l'attenzione, la prudenza e
+          il rispetto delle regole. Questi pilastri sono cruciali per prevenire incidenti e garantire viaggi sicuri per
+          tutti i conducenti. Comprendere e applicare questi principi è essenziale per creare un ambiente stradale più
+          sicuro e armonioso per tutti coloro che condividono la strada con te.</h4><br>
+        <p><strong>VISION:</strong> I principi di guida sicura sono la chiave per una circolazione stradale sicura ed
+          efficiente. Da una guida attenta a un comportamento prudente, questi elementi sono essenziali per prevenire
+          incidenti e proteggere la tua vita e quella degli altri conducenti. Imparare e rispettare questi principi è il
+          primo passo per diventare un conducente più sicuro e responsabile.</p>
       </div>
     </div>
   </div>
+
+  <!--Tecniche di guida sicura-->
+  <div id="about" class="container-pad">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2>Tecniche di guida sicura</h2><br>
+        <h4>Oltre al rispetto delle regole, esistono tecniche pratiche che possono migliorare la tua sicurezza alla
+          guida. Da mantenere una distanza di sicurezza agli specchietti retrovisori, scopri come adottare una guida
+          sicura e difensiva per proteggere te stesso e gli altri utenti della strada. Imparare e applicare queste
+          tecniche può fare la differenza in situazioni di emergenza e migliorare complessivamente la tua sicurezza
+          stradale.</h4><br>
+        <p>Raffina le tue abilità di guida con tecniche sicure e comprovate. Da manovre di parcheggio a cambi di corsia,
+          impara le strategie che possono proteggere te e gli altri conducenti durante ogni viaggio. Mettere in pratica
+          queste tecniche non solo ti renderà un conducente più sicuro, ma contribuirà anche a creare un ambiente
+          stradale più armonioso e privo di stress.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-signal logo"></span>
+      </div>
+    </div>
+  </div>
+
+  <!--Conclusioni-->
+  <div class="container-pad bg-grey">
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-globe logo slideanim"></span>
+      </div>
+      <div class="col-sm-8">
+        <h2>Conclusioni</h2><br>
+        <h4><strong>MISSION:</strong> La guida sicura è una responsabilità condivisa da tutti i conducenti. Metti in
+          pratica ciò che hai imparato qui per contribuire a rendere le strade più sicure per tutti. Ricorda, ogni volta
+          che ti metti al volante, hai la responsabilità di proteggere te stesso e gli altri utenti della strada. Non
+          sottovalutare mai il potere di una guida sicura e responsabile.</h4><br>
+        <p><strong>VISION:</strong> Siamo tutti responsabili della nostra sicurezza stradale. Concludi il tuo viaggio
+          attraverso la guida sicura con un impegno rinnovato per adottare comportamenti responsabili e proteggere te
+          stesso e gli altri conducenti. Ogni azione che intraprendi sulla strada può avere un impatto significativo
+          sulla sicurezza di tutti. Sii il cambiamento che vuoi vedere sulle strade e insieme possiamo rendere
+          l'esperienza di guida più sicura per tutti.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Footer-->
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+      </ul>
+      <p class="text-center text-body-secondary">&copy; 2024 Company, Inc</p>
+    </footer>
+  </div>
+  <script src="assets\dist\js\bootstrap.bundle.min.js"></script>
 
 </body>
 
