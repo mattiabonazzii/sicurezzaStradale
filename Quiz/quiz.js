@@ -73,26 +73,27 @@ function generateCards() {
         "vero", "falso"
     ]
 
-    function check_answer(numero_domanda, risposta){
-        let carta = document.getElementById("domanda" + numero_domanda);
-        // const rispostaCorretta = "vero"; // Imposta la risposta vero per ogni domanda ##### DA CAMBIARE
-        let rispostaCorretta;
-        if(dict_risposte[numero_domanda] == "vero"){
-            rispostaCorretta = "vero"
-        }else{
-            rispostaCorretta = "falso"
-        }
+function check_answer(numero_domanda, risposta){
+    let carta = document.getElementById("domanda" + numero_domanda);
+    // const rispostaCorretta = "vero"; // Imposta la risposta vero per ogni domanda ##### DA CAMBIARE
+    let rispostaCorretta;
 
-
-        let imgElement = carta.querySelector(".card-img-top");
-
-      // Verifica se la risposta data dall'utente è corretta
-        if (risposta === rispostaCorretta) {
-            carta.style.backgroundColor = "lightgreen"; // Imposta lo sfondo verde per una risposta corretta
-           imgElement.src = "../img/Quiz/rispostaquizgiusta.jpg";
-        } else {
-            carta.style.backgroundColor = "lightcoral"; // Imposta lo sfondo rosso per una risposta errata
-            imgElement.src = "../img/Quiz/rispostasbagliata.png";
-        }
+    if(dict_risposte[numero_domanda] == "vero"){
+        rispostaCorretta = "vero"
+    }else{
+        rispostaCorretta = "falso"
     }
+
+
+    let imgElement = carta.querySelector(".card-img-top");
+
+  // Verifica se la risposta data dall'utente è corretta
+    if (risposta === rispostaCorretta) {
+        carta.style.backgroundColor = "lightgreen"; // Imposta lo sfondo verde per una risposta corretta
+        imgElement.src = "../img/Quiz/memegiusto.jpg";
+    } else {
+        carta.style.backgroundColor = "lightcoral"; // Imposta lo sfondo rosso per una risposta errata
+        imgElement.src = "../img/Quiz/memesbagliato.jpeg";
+    }
+}
     generateCards()
