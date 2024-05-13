@@ -2,6 +2,10 @@ main{
     margin-top: 100px;
 }
 
+.rounded-image {
+    border-radius: 20px; /* Rende il bordo arrotondato al 50%, quindi un cerchio */
+}
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
