@@ -3,7 +3,7 @@ main{
 }
 
 .rounded-image {
-    border-radius: 20px; /* Rende il bordo arrotondato al 50%, quindi un cerchio */
+    border-radius: 20px;
 }
 
 .bd-placeholder-img {
