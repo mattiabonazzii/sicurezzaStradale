@@ -1,22 +1,5 @@
-:root {
-    --light-text-color: #000000;
-    /* Nero */
-    --dark-text-color: #ffffff;
-    /* Bianco */
-}
-
-.carousel-caption.light-theme {
-    color: var(--light-text-color);
-    /* Applica il colore del testo nero per il tema chiaro */
-    background-color: rgba(255, 255, 255, 0.5);
-    /* Sfondo leggermente trasparente per migliorare la leggibilità */
-}
-
-.carousel-caption.dark-theme {
-    color: var(--dark-text-color);
-    /* Applica il colore del testo bianco per il tema scuro */
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Sfondo leggermente trasparente per migliorare la leggibilità */
+main{
+    margin-top: 100px;
 }
 
 .bd-placeholder-img {
@@ -36,11 +19,10 @@
 .b-example-divider {
     width: 100%;
     height: 3rem;
-    background-color: rgba(0, 0, 0, 0.1);
-    border: solid rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
     border-width: 1px 0;
-    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
-        inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
 }
 
 .b-example-vr {
@@ -50,7 +32,7 @@
 }
 
 .bi {
-    vertical-align: -0.125em;
+    vertical-align: -.125em;
     fill: currentColor;
 }
 
@@ -97,23 +79,14 @@
     display: block !important;
 }
 
-.carousel-item {
-    position: relative;
-}
-
-.carousel-caption {
-    font-family: "Montserrat", sans-serif;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.carousel-caption h1,
-.carousel-caption p {
-    font-family: "Open Sans", sans-serif;
-    margin: 0;
-}
+.image-container {
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+  .image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
