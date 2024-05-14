@@ -15,7 +15,7 @@ function generateCards() {
         
         num = Math.floor(Math.random()*40) + 1
 
-        address = 'http://mattiapazzo.pythonanywhere.com/api/question/'
+        address = 'https://mattiapazzo.pythonanywhere.com/api/question/'
         // address = 'http://localhost:5000/api/question/'
         fetch(address + num)
             .then(response => response.json())
