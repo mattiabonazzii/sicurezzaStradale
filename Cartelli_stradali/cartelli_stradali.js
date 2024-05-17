@@ -29,4 +29,3 @@ function sceltaImmagini() {
 
 var listaImmagini = [];
 creaLista();
-sceltaImmagini();
