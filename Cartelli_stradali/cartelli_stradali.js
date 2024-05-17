@@ -17,15 +17,14 @@ function creaLista() {
 }
 
 function sceltaImmagini() {
-    var indiceImmagineScelta = Math.floor(Math.random() * listaImmagini.length);
-    var immagineScelta = listaImmagini[indiceImmagineScelta];
-    var title = document.getElementById("card-title");
-    var text = document.getElementById("card-text");
-    var immagine = document.getElementById("card-image");
+    var immagineScelta = listaImmagini[Math.floor(Math.random() * listaImmagini.length)];
+    var title = document.getElementById("card-title")
+    var text = document.getElementById("card-text")
+    var immagine = document.getElementById("card-immage")
 
-    title.textContent = immagineScelta.titolo;
-    text.textContent = immagineScelta.descrizione;
-    immagine.src = immagineScelta.immagine;
+    title.textContent = immagineScelta.titolo
+    text.textContent = immagineScelta.descrizione
+    immagine.src = immagineScelta.immagine
 }
 
 var listaImmagini = [];
