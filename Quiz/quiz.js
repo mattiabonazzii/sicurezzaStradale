@@ -1,6 +1,8 @@
 let dict_risposte = {};
 
 let domande = [];
+let counter_risposte_giuste = 0;
+let counter_risposte_sbagliate = 0;
 
 function generateCards() {
     const container = document.getElementById("cards-container");
@@ -94,13 +96,21 @@ function check_answer(numero_domanda, risposta, trueButton, falseButton) {
     if (risposta === rispostaCorretta) {
         carta.style.backgroundColor = "lightgreen";
         imgElement.src = "../img/Quiz/memegiustoresize.jpg";
+        counter_risposte_giuste+=1;
     } else {
         carta.style.backgroundColor = "lightcoral";
         imgElement.src = "../img/Quiz/memesbagliatoresize.jpeg";
+        counter_risposte_sbagliate+=1;
     }
 
     // Disabilita i bottoni una volta cliccato
     trueButton.disabled = true;
     falseButton.disabled = true;
+
+    if(counter_risposte_giuste == 10){
+        alert("Hai passato l'esame!!!");
+    }else if(counter_risposte_giuste+counter_risposte_sbagliate == 10){
+        alert("Non hai passato l'esame :(");
+    }
 }
-    generateCards()
+    generateCards();
