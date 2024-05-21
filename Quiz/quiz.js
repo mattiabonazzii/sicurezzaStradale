@@ -11,12 +11,11 @@ function generateCards() {
         card.classList.add("card", "m-2");
         card.style.maxWidth = larghezzaMassima + "%";
         // card.style.maxHeight = 1 + "%";
-        card.style.backgroundColor = "cyan";
+        card.style.backgroundColor = "white";
         
         num = Math.floor(Math.random()*40) + 1
 
         address = 'https://mattiapazzo.pythonanywhere.com/api/question/'
-        // address = 'http://localhost:5000/api/question/'
         fetch(address + num)
             .then(response => response.json())
             .then(questions =>{
@@ -46,18 +45,18 @@ function generateCards() {
         cardText.classList.add("card-text");
         cardText.textContent = domanda;
 
-        const trueButton = document.createElement("a");
+        const trueButton = document.createElement("button");
         trueButton.classList.add("btn", "btn-primary", "me-2");
         trueButton.textContent = "Vero";
-        trueButton.addEventListener("click", () => check_answer(i, "vero"));
+        trueButton.addEventListener("click", () => check_answer(i, "vero", trueButton, falseButton)); //funzione freccia per definire funzioni anonime (tipo lambda expression)
 
-        const falseButton = document.createElement("a");
+        const falseButton = document.createElement("button");
         falseButton.classList.add("btn", "btn-primary");
         falseButton.textContent = "Falso";
-        falseButton.addEventListener("click", () => check_answer(i, "falso"));
+        falseButton.addEventListener("click", () => check_answer(i, "falso", trueButton, falseButton)); //funzione freccia per definire funzioni anonime (tipo lambda expression)
 
         cardTitle.textContent = "Domanda numero " + i;
-        cardBody.appendChild(cardTitle);
+        // cardBody.appendChild(cardTitle);
         cardBody.appendChild(cardText);
         cardBody.appendChild(trueButton);
         cardBody.appendChild(falseButton);
@@ -75,27 +74,23 @@ function generateCards() {
         "vero", "falso"
     ]
 
-function check_answer(numero_domanda, risposta){
+
+function check_answer(numero_domanda, risposta, trueButton, falseButton) {
     let carta = document.getElementById("domanda" + numero_domanda);
-    // const rispostaCorretta = "vero"; // Imposta la risposta vero per ogni domanda ##### DA CAMBIARE
-    let rispostaCorretta;
-
-    if(dict_risposte[numero_domanda] == "vero"){
-        rispostaCorretta = "vero"
-    }else{
-        rispostaCorretta = "falso"
-    }
-
-
+    let rispostaCorretta = dict_risposte[numero_domanda] === "vero" ? "vero" : "falso";
+   
     let imgElement = carta.querySelector(".card-img-top");
-
-  // Verifica se la risposta data dall'utente è corretta
+   
     if (risposta === rispostaCorretta) {
-        carta.style.backgroundColor = "lightgreen"; // Imposta lo sfondo verde per una risposta corretta
-        imgElement.src = "../img/Quiz/memegiusto.jpg";
+        carta.style.backgroundColor = "lightgreen";
+        imgElement.src = "../img/Quiz/memegiustoresize.jpg";
     } else {
-        carta.style.backgroundColor = "lightcoral"; // Imposta lo sfondo rosso per una risposta errata
-        imgElement.src = "../img/Quiz/memesbagliato.jpeg";
+        carta.style.backgroundColor = "lightcoral";
+        imgElement.src = "../img/Quiz/memesbagliatoresize.jpeg";
     }
+
+    // Disabilita i bottoni una volta cliccato
+    trueButton.disabled = true;
+    falseButton.disabled = true;
 }
     generateCards()
