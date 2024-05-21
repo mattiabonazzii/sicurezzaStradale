@@ -1,5 +1,7 @@
 let dict_risposte = {};
 
+let domande = [];
+
 function generateCards() {
     const container = document.getElementById("cards-container");
     const cartePerRiga = 5;
@@ -13,7 +15,15 @@ function generateCards() {
         // card.style.maxHeight = 1 + "%";
         card.style.backgroundColor = "white";
         
-        num = Math.floor(Math.random()*40) + 1
+        flag = true;
+        do{
+            num = Math.floor(Math.random()*40) + 1
+            if(!domande.includes(num)){
+                domande.push(num);
+                flag = false;
+            }
+        }while(flag == true);
+        
 
         address = 'https://mattiapazzo.pythonanywhere.com/api/question/'
         fetch(address + num)
