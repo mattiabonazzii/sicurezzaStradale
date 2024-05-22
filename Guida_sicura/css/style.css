@@ -1,0 +1,8 @@
+.carousel-caption {
+    background: rgba(255, 255, 255, 0.5);
+    /* Sfondo bianco con opacità dell'80% */
+    padding: 10px;
+    border-radius: 5px;
+    color: #000;
+    /* Colore del testo nero per contrastare lo sfondo bianco trasparente */
+}
