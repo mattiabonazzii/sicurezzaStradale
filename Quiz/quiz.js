@@ -103,14 +103,17 @@ function check_answer(numero_domanda, risposta, trueButton, falseButton) {
         counter_risposte_sbagliate+=1;
     }
 
-    // Disabilita i bottoni una volta cliccato
+    //una volta risposto disabilita i bottoni
     trueButton.disabled = true;
     falseButton.disabled = true;
 
-    if(counter_risposte_giuste == 10){
-        alert("Hai passato l'esame!!!");
-    }else if(counter_risposte_giuste+counter_risposte_sbagliate == 10){
-        alert("Non hai passato l'esame :(");
-    }
+    //serve per aspettare che l'immagine carichi per poi dire il risultato
+    imgElement.onload = function() {
+        if (counter_risposte_giuste == 10) {
+            alert("Hai passato l'esame!!!");
+        } else if (counter_risposte_giuste + counter_risposte_sbagliate == 10) {
+            alert("Non hai passato l'esame :(");
+        }
+    };
 }
     generateCards();
